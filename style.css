@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #001b29;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10%;
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    padding: 0 16px;
+    font-weight: 600;
+    transition: 0.2s all;
+    opacity: 0;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: rgb(83, 198, 243);
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding: 20px 10%;
+    left:80px;
+}
+
+/* Home Content */
+.home-content h3 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+
+.home-content h1 {
+    font-size: 40px;
+    font-weight: 500;
+    opacity: 0;
+    animation: slideRight 0.5s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 span {
+    color: rgba(59, 211, 72, 0.938);
+    font-size: 30px;
+}
+/* Paragraph Style */
+.home-content p {
+    font-size: 20px;
+    margin: 20px 0;   
+    line-height: 1.5;   
+    color: rgba(255, 255, 255, 0.8); 
+    text-align: center;
+    animation: fadeIn 1s ease forwards; 
+    opacity: 0;
+    animation-delay: 1s; 
+}
+
+/* Keyframes for Fade In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Social Media Icons */
+.social-media {
+    margin: 20px 0;
+}
+
+.social-media a {
+    color: #0ef;
+    font-size: 30px;
+    margin: 0 10px;
+    transition: 0.5s ease;
+}
+
+.social-media a:hover {
+    box-shadow: 0 0 1rem #0ef;
+    background-color: #0ef;
+}
+
+/* Button */
+.button {
+    background-color: #0ef;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 40px;
+    transition: 0.3s;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: white;
+    color: #001b29;
+}
+
+/* About Section */
+.about-container {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.about-container .heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+.button {
+    background-color: #0ef;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 40px;
+    transition: 0.3s;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: white;
+    color: #001b29;
+}
+
+/* Keyframes */
+@keyframes navMenu {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
